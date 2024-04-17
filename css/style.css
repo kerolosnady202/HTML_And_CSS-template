@@ -134,11 +134,7 @@ a{
     transition: 0.3s;
     font-size: 18px;
 } 
-.header  .main-nav > li:hover .mega-menu{
-    opacity: 1;
-    top: calc(100% + 2px);
-    z-index: 100;
-}
+
 @media (max-width:768px){
     .header .container .main-nav > li > a{
         padding: 10px;
@@ -158,7 +154,7 @@ a{
     width: 0;
     height: 2px;
     background-color: var(--main-color);
-    transition: 0.3s;
+    transition: 1s;
 } 
 .header  .main-nav > li > a:hover::after{
   width: 100%; 
@@ -176,7 +172,13 @@ a{
     z-index: -1;
     border-bottom: 4px solid var(--main-color);
     transition: top var(--main-transtion), opacity var(--main-transtion), z-index var(--main-transtion);
-}@media (max-width:767px){
+}
+.header  .main-nav > li:hover .mega-menu{
+    opacity: 1;
+    top: calc(100% + 2px);
+    z-index: 100;
+}
+@media (max-width:767px){
     .header .mega-menu{
         flex-direction: column;
         gap: 0;
@@ -1292,6 +1294,7 @@ a{
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .discound .content{
     padding: 0 20px;
@@ -1303,7 +1306,7 @@ a{
     margin-bottom: 20px;
   }
 .discound .image{
-    flex-basis: 50%;
+    width: 50%;
     background-image: url(../tools/discount-background1.jpg);
     color: white;
     flex-basis: 50%;
